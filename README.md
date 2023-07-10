@@ -7,7 +7,7 @@
 git clone git@github.com:epsilon-638/nlp-workbench.git
 cd nlp-workbench
 mix escript.build
-./string_app --pipeline=lowercase,remove_stopwords "THIS IS A QUICK EXAMPLE"
+./nlp_workbench --pipeline=lowercase,remove_stopwords "THIS IS A QUICK EXAMPLE"
 ```
 
 Output

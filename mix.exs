@@ -3,7 +3,7 @@ defmodule ExampleAppCli.MixProject do
 
   def project do
     [
-      app: :string_app,
+      app: :nlp_workbench,
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
@@ -13,7 +13,7 @@ defmodule ExampleAppCli.MixProject do
   end
 
   defp escript do
-    [main_module: StringApp.Cli]
+    [main_module: NlpWorkbench.Cli]
   end
 
   # Run "mix help compile.app" to learn about applications.

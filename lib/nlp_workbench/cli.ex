@@ -1,4 +1,4 @@
-defmodule StringApp.Cli do
+defmodule NlpWorkbench.Cli do
   @moduledoc """
   Documentation for `StringApp.Cli`.
   """
@@ -31,24 +31,24 @@ defmodule StringApp.Cli do
     } do
       {true, _, fp, _} ->
         case fp == nil do
-          true -> StringApp.StringMethods.upper(word)
-          false -> StringApp.StringMethods.upperfile(fp)
+          true -> NlpWorkbench.StringMethods.upper(word)
+          false -> NlpWorkbench.StringMethods.upperfile(fp)
         end
 
       {_, true, fp, _} ->
         case fp == nil do
-          true -> StringApp.StringMethods.lower(word)
-          false -> StringApp.StringMethods.lowerfile(fp)
+          true -> NlpWorkbench.StringMethods.lower(word)
+          false -> NlpWorkbench.StringMethods.lowerfile(fp)
         end
       {_, _, fp, pipeline} ->
         case {fp == nil, pipeline == nil} do
           {false, false} ->
             pipeline_ops = String.split(pipeline, ",")
-            StringApp.StringMethods.pipefile(pipeline_ops, fp)
+            NlpWorkbench.StringMethods.pipefile(pipeline_ops, fp)
 
           {true, false} ->
             pipeline_ops = String.split(pipeline, ",")
-            StringApp.StringMethods.pipe(pipeline_ops, word)
+            NlpWorkbench.StringMethods.pipe(pipeline_ops, word)
 
         end
     end

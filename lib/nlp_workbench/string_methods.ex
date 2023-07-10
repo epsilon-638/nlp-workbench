@@ -1,4 +1,4 @@
-defmodule StringApp.StringMethods do
+defmodule NlpWorkbench.StringMethods do
   @spec upper(String.t) :: String.t
   def upper(word) do
     String.upcase(word)
