@@ -3,7 +3,7 @@
 **A CLI for doing quick NLP tasks**
 
 ## Quickstart
-```
+```bash
 git clone git@github.com:epsilon-638/nlp-workbench.git
 cd nlp-workbench
 mix escript.build
